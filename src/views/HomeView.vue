@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <img class="pokedex_Img" src="../assets/backgrounds/pokedex.png" alt="">
+  <img class="pokedex_Img" src="../assets/backgrounds/pokedex.png" alt="pokedex image" />
 </template>
 
 <style>

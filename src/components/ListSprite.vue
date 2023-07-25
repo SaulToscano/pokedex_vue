@@ -26,7 +26,7 @@
     <RouterLink :to="{ path: '/list/' +  data.id}">
       <div class="pokemon_data">
         <p class="pokemon_id">{{data.id}}</p>
-        <img class="pokemonSprite" :src="urlSprite"/>
+        <img class="pokemonSprite" :src="urlSprite" alt="pokemon sprite"/>
       </div>
     </RouterLink>
   </div>

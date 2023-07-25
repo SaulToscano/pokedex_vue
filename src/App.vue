@@ -8,7 +8,7 @@
       <nav class="nav">
         <RouterLink class="navButtons" to="/"><el-button class="elementButton" type="info">Home</el-button></RouterLink>
         <RouterLink class="navButtons" to="/list"><el-button class="elementButton" type="info">List</el-button></RouterLink>
-        <img class="main_logo" src="./assets/backgrounds/logo_principal.png" alt="" />
+        <img class="main_logo" src="./assets/backgrounds/logo_principal.png" alt="Main logo" />
       </nav>
     </div>
   </header>

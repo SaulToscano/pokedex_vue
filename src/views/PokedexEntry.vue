@@ -30,7 +30,7 @@
       <div class="pokemon_container">
         <div class="Photo">
           <h3 class="pokemon_card_id">#{{data.id}}</h3>
-          <img class="Image" :src="urlSprite"/>
+          <img class="Image" :src="urlSprite" alt="pokemon artwork"/>
           <div class="pokemon_name">
             <h3 class="pokemon_photo_name">{{data.name}}</h3>
           </div>
@@ -39,9 +39,9 @@
         <div class="stat_bars">
           <div class="types_wrapper">
             <div >
-              <img v-for="types in data.types" class="type_img" :src="urlType + types.type.name + '.png'" />
+              <img v-for="types in data.types" class="type_img" :src="urlType + types.type.name + '.png'" alt="pokemon type" />
             </div>
-            <img src="../assets/backgrounds/pokeball.gif" alt="">
+            <img src="../assets/backgrounds/pokeball.gif" alt="pokeball gif" />
           </div>
           <div class="bar_wrapper" v-for="bar in data.stats">
             <StatBar :stat="bar"></StatBar>
@@ -68,14 +68,16 @@
 
   @media (min-width: 720px) {
     .pokemon_data_container {
+      margin-top: 5rem;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
 
-    .pokemon_data_container {
-      margin-top: 5rem;
+    .pokemon_container {
+      flex-direction: row;
+      align-items: flex-start;
     }
   }
 
@@ -86,10 +88,6 @@
   .pokemon_photo_name {
     font-family: Lucida Handwriting;
     color: gray;
-  }
-
-  .pokemon_data_container {
-    
   }
 
   .pokemon_card_id {
