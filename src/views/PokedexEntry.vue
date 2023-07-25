@@ -2,14 +2,11 @@
   import { ref } from 'vue'
   import { useRoute } from 'vue-router'
   import pokemonTypes from '../utils/types';
-
   import StatBar from '../components/PokemonStatBar.vue'
   
   const route = useRoute()
   const id = route.params.id
-
   const urlData = "https://pokeapi.co/api/v2/pokemon/" + id;
-
   const data = ref(null);
   const error = ref(null);
   let urlSprite = ref(null);
@@ -18,7 +15,6 @@
   .then((res) => res.json())
   .then((json) => {data.value = json; urlSprite = json.sprites.other["official-artwork"].front_default})
   .catch((err) => (error.value = err))
-
 </script>
 
 <template>
