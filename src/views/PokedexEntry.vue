@@ -1,6 +1,7 @@
 <script setup>
   import { ref } from 'vue'
   import { useRoute } from 'vue-router'
+  import pokemonTypes from '../utils/types';
 
   import StatBar from '../components/PokemonStatBar.vue'
   
@@ -12,8 +13,6 @@
   const data = ref(null);
   const error = ref(null);
   let urlSprite = ref(null);
-
-  let urlType = "/src/assets/types/"
 
   fetch(urlData)
   .then((res) => res.json())
@@ -39,7 +38,7 @@
         <div class="stat_bars">
           <div class="types_wrapper">
             <div >
-              <img v-for="types in data.types" class="type_img" :src="urlType + types.type.name + '.png'" alt="pokemon type" />
+              <img v-for="types in data.types" class="type_img" :src="pokemonTypes[types.type.name]" alt="pokemon type" />
             </div>
             <img src="../assets/backgrounds/pokeball.gif" alt="pokeball gif" />
           </div>
